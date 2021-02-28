@@ -59,6 +59,15 @@ namespace Synlait.Api.TimeZone.Services
             return await _googleApiTimeZoneClient.GetTimeZoneDataAsync(apiKey, latitude, longitude, dateTimeOffset.ToUnixTimeSeconds());
         }
 
+        /// <summary>
+        /// Save the timezone data retrieved from third party service
+        /// </summary>
+        /// <param name="model"></param>
+        /// <param name="apiKey"></param>
+        /// <param name="latitude"></param>
+        /// <param name="longitude"></param>
+        /// <param name="dateTimeOffset"></param>
+        /// <returns></returns>
         public async Task SaveTimeZoneDataAsync(TimeZoneOutputModel model, string apiKey, float latitude, float longitude, DateTimeOffset dateTimeOffset)
         {
             using (var database = new DatabaseContext(_options))
@@ -69,7 +78,7 @@ namespace Synlait.Api.TimeZone.Services
                     Latitude = latitude,
                     Longitude = longitude,
                     Request = JsonConvert.SerializeObject(new { latitude, longitude, timestamp = dateTimeOffset.ToUnixTimeSeconds(), apiKey }),
-                    Response = JsonConvert.SerializeObject(data),
+                    Response = JsonConvert.SerializeObject(model),
                     Timestamp = dateTimeOffset.ToUnixTimeSeconds(),
                     DateCreated = DateTime.UtcNow,
                     DateModified = DateTime.UtcNow

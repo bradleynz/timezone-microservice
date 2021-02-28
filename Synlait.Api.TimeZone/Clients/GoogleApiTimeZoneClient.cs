@@ -20,7 +20,7 @@ namespace Synlait.Api.TimeZone
         }
 
         /// <summary>
-        /// 
+        ///  Get timezone data from the Google Timezone API
         /// </summary>
         /// <param name="apiKey"></param>
         /// <param name="baseAddress"></param>

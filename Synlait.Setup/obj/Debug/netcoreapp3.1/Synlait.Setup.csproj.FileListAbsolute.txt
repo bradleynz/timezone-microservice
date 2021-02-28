@@ -1,0 +1,12 @@
+C:\Users\Brad\source\repos\Synlait.Api.Solution\Synlait.Setup\bin\Debug\netcoreapp3.1\Synlait.Setup.exe
+C:\Users\Brad\source\repos\Synlait.Api.Solution\Synlait.Setup\bin\Debug\netcoreapp3.1\Synlait.Setup.deps.json
+C:\Users\Brad\source\repos\Synlait.Api.Solution\Synlait.Setup\bin\Debug\netcoreapp3.1\Synlait.Setup.runtimeconfig.json
+C:\Users\Brad\source\repos\Synlait.Api.Solution\Synlait.Setup\bin\Debug\netcoreapp3.1\Synlait.Setup.runtimeconfig.dev.json
+C:\Users\Brad\source\repos\Synlait.Api.Solution\Synlait.Setup\bin\Debug\netcoreapp3.1\Synlait.Setup.dll
+C:\Users\Brad\source\repos\Synlait.Api.Solution\Synlait.Setup\bin\Debug\netcoreapp3.1\Synlait.Setup.pdb
+C:\Users\Brad\source\repos\Synlait.Api.Solution\Synlait.Setup\obj\Debug\netcoreapp3.1\Synlait.Setup.AssemblyInfoInputs.cache
+C:\Users\Brad\source\repos\Synlait.Api.Solution\Synlait.Setup\obj\Debug\netcoreapp3.1\Synlait.Setup.AssemblyInfo.cs
+C:\Users\Brad\source\repos\Synlait.Api.Solution\Synlait.Setup\obj\Debug\netcoreapp3.1\Synlait.Setup.csproj.CoreCompileInputs.cache
+C:\Users\Brad\source\repos\Synlait.Api.Solution\Synlait.Setup\obj\Debug\netcoreapp3.1\Synlait.Setup.dll
+C:\Users\Brad\source\repos\Synlait.Api.Solution\Synlait.Setup\obj\Debug\netcoreapp3.1\Synlait.Setup.pdb
+C:\Users\Brad\source\repos\Synlait.Api.Solution\Synlait.Setup\obj\Debug\netcoreapp3.1\Synlait.Setup.genruntimeconfig.cache

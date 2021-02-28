@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Synlait.Api.TimeZone", "Synlait.Api.TimeZone\Synlait.Api.TimeZone.csproj", "{2B9AEFE8-A624-4506-943E-9ACBE5CC5AC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synlait.Setup", "Synlait.Setup\Synlait.Setup.csproj", "{71A0CB93-1766-49C0-8298-038E3C01FE60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B9AEFE8-A624-4506-943E-9ACBE5CC5AC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B9AEFE8-A624-4506-943E-9ACBE5CC5AC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B9AEFE8-A624-4506-943E-9ACBE5CC5AC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B9AEFE8-A624-4506-943E-9ACBE5CC5AC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71A0CB93-1766-49C0-8298-038E3C01FE60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71A0CB93-1766-49C0-8298-038E3C01FE60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71A0CB93-1766-49C0-8298-038E3C01FE60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71A0CB93-1766-49C0-8298-038E3C01FE60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {179521D6-C4E0-4B9B-9CE1-5DE116301891}
+	EndGlobalSection
+EndGlobal

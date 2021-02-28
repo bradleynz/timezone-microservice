@@ -1,0 +1,23 @@
+services:
+    timezone-api:
+       image: synlaitapitimezone_web
+       environment:
+         - DatabaseConnection=Server=sqldata;Initial Catalog=TimeZoneDb;User Id=sa;Password=Pass@word
+       expose:
+          - "80"
+       ports:
+         - "5101:80"
+        #extra hosts can be used for standalone SQL Server or services at the dev PC
+       extra_hosts:
+         - "CESARDLSURFBOOK:10.0.75.1"
+       depends_on:
+         - sqldata
+
+    sqldata:
+        image: microsoft/mssql-server-windows-express:latest
+        environment:
+          - SA_PASSWORD=Pass@word
+          - ACCEPT_EULA=Y
+        ports:
+          - "5434:1433"
+

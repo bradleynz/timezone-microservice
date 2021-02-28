@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "81f9e6aa-5774-4432-a0f8-88e7552a34fc",
+		"name": "Synlait Timezone API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Fetch Timezone from Google API via Microservice",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Latitude\": -43.5320,\r\n    \"Longitude\": 172.6306,\r\n    \"DateTimeOffset\": \"2021-02-27\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5101/timezone/data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5101",
+					"path": [
+						"timezone",
+						"data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Timezone Request Logs via Microservice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5101/timezone/data/logs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5101",
+					"path": [
+						"timezone",
+						"data",
+						"logs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Synlait.Api.TimeZone
 {
     /// <summary>
-    /// 
+    /// Client used for interacting with the Google Timezone API
     /// </summary>
     public class GoogleApiTimeZoneClient : IGoogleApiTimeZoneClient
     {

@@ -21,7 +21,7 @@ namespace Synlait.Api.TimeZone.Services
         }
 
         /// <summary>
-        /// Get the timzone data logs
+        /// Get the timezone data logs
         /// </summary>
         /// <returns></returns>
         public TimeZoneOutputLogModel[] GetTimeZoneDataLogs()

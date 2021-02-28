@@ -56,8 +56,11 @@ namespace Synlait.Api.TimeZone.Services
         /// <returns>TimeZoneOutputModel</returns>
         public async Task<TimeZoneOutputModel> GetTimeZoneDataAsync(string apiKey, float latitude, float longitude, DateTimeOffset dateTimeOffset)
         {
-            var data = await _googleApiTimeZoneClient.GetTimeZoneDataAsync(apiKey, latitude, longitude, dateTimeOffset.ToUnixTimeSeconds());
+            return await _googleApiTimeZoneClient.GetTimeZoneDataAsync(apiKey, latitude, longitude, dateTimeOffset.ToUnixTimeSeconds());
+        }
 
+        public async Task SaveTimeZoneDataAsync(TimeZoneOutputModel model, string apiKey, float latitude, float longitude, DateTimeOffset dateTimeOffset)
+        {
             using (var database = new DatabaseContext(_options))
             {
                 var entity = new TimeZoneDataEntity
@@ -75,8 +78,6 @@ namespace Synlait.Api.TimeZone.Services
                 database.TimeZoneData.Add(entity);
                 await database.SaveChangesAsync();
             }
-
-            return data;
         }
     }
 }

@@ -2,7 +2,6 @@
 using Microsoft.Extensions.Configuration;
 using Synlait.Api.TimeZone.Models;
 using Synlait.Api.TimeZone.Services;
-using System;
 using System.Threading.Tasks;
 
 namespace Synlait.Api.Solution.Controllers
@@ -45,7 +44,11 @@ namespace Synlait.Api.Solution.Controllers
             {
                 return BadRequest(new { Error = "Api Key not configured" });
             }
-            return Ok(await _timeZoneService.GetTimeZoneDataAsync(apiKey, model.Latitude, model.Longitude, model.DateTimeOffset));
+
+            var data = await _timeZoneService.GetTimeZoneDataAsync(apiKey, model.Latitude, model.Longitude, model.DateTimeOffset);
+            await _timeZoneService.SaveTimeZoneDataAsync(data, apiKey, model.Latitude, model.Longitude, model.DateTimeOffset);
+           
+            return Ok(data);
         }
     }
 }

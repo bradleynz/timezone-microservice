@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Synlait.Api.TimeZone.Models;
 using Synlait.Api.TimeZone.Services;
+using System;
 using System.Threading.Tasks;
 
 namespace Synlait.Api.Solution.Controllers
@@ -35,11 +36,16 @@ namespace Synlait.Api.Solution.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost, Route("data")]
-        public async Task<TimeZoneOutputModel> GetTimeZoneDataAsync(TimeZoneInputModel model)
+        public async Task<IActionResult> GetTimeZoneDataAsync(TimeZoneInputModel model)
         {
             var apiKey = _configuration["Google:TimeZone:ApiKey"];
 
-            return await _timeZoneService.GetTimeZoneDataAsync(apiKey, model.Latitude, model.Longitude, model.DateTimeOffset);
+            // Check to see if ApiKey defined in settings
+            if(string.IsNullOrWhiteSpace(apiKey) || apiKey == "ADD API KEY HERE")
+            {
+                return BadRequest(new { Error = "Api Key not configured" });
+            }
+            return Ok(await _timeZoneService.GetTimeZoneDataAsync(apiKey, model.Latitude, model.Longitude, model.DateTimeOffset));
         }
     }
 }
